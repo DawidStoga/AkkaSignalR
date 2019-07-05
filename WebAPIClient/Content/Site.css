@@ -1,0 +1,226 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+    text-transform:uppercase;
+}
+
+table#fares{
+    border:2px solid white;
+    font-size:14px;
+    border-top-color:firebrick;
+}
+table#fares>thead>tr>th{
+    background-color:yellow;
+    border:1px solid black;
+    padding:2px 5px;
+}
+table#fares > tbody > tr > td {
+    background-color:white;
+    border:1px solid black;
+    padding:2px 5px;
+    }
+/*.btn{
+    width:80px;
+}*/
+table#fares > tbody >tr > td.farewidth {
+    width:90px;
+    background-color:#ddd;
+}
+table#fares > tbody >tr >td>input.farewidth {
+    width:80px;
+}
+.farestable,.userstable{
+    width:100%;
+    font-size:14px;
+    table-layout:fixed;
+}
+.name{
+    width:95%;
+}
+.custom{
+    font-size:16px;
+    width:100%;
+}
+.usrcnt{
+    width:50px;
+    background-color:#eee;
+    border:0;
+}
+.error{
+    color:red;
+}
+.bthfare{
+    width:100px;
+    text-transform:none;
+    margin:5px 10px 0 0;
+}
+.userage{
+    width:50px;
+}
+
+#loading {
+    position: absolute;
+    padding: 16px 32px;
+    border: solid 1px #222;
+    background-color: #444;
+    color: #ddd;
+    top: 120px;
+    left: 350px;
+    border-radius: 2px;
+}
+#container {
+    position: relative;
+    font-family: sans-serif;
+}
+section{
+    margin-bottom:10px;
+}
+.date{
+    background: url(../images/cal.jpg) no-repeat scroll 10px 10px;
+    background-size: 30px 30px;
+    background-color:white;
+    background-position: bottom 6px right 15px;
+    width:150px;
+}
+
+input{
+    font-weight:bold;
+   color:grey;
+   padding:7px 4px;
+   border:1px grey solid;
+   -moz-box-shadow: -5px -5px 5px #888;
+    -webkit-box-shadow: -5px -5px 5px #888;
+    box-shadow: -5px -5px 5px #888;
+    border-radius:4px;
+}
+button{
+    font-weight:bold;
+   color:grey;
+   padding:10px 4px;
+   border:1px grey solid;
+   -moz-box-shadow: -5px -5px 5px #888;
+    -webkit-box-shadow: -5px -5px 5px #888;
+    box-shadow: -5px -5px 5px #888;
+    border-radius:4px;
+}
+.date:focus{
+    background-image: none;
+}
+section> input>button{
+    text-transform: none;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    font-weight:normal;
+    text-transform: none;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-weight:normal;
+    text-transform: none;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font-weight:normal;
+    text-transform: none;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    font-weight:normal;
+    text-transform: none;
+}
+.ui-datepicker {
+   background: #999;
+   border: 1px solid #555;
+   color: #EEE;
+ }
+.fareinput{
+    float:left;
+    margin-right:60px;
+}
+ui-datepicker-header{
+   background: #EEE;
+}
+label,input{
+    display:block;
+}
+.airport{
+    width:250px;
+}
+.airline{
+    width:200px;
+}
+.cabin{
+    width:80px;
+}
+span#notification-bar{
+    color:forestgreen;
+    font-weight:bold;
+}
+#txtUploadFile{
+    display:inline-block;
+}
+#btnadd{
+    height:45px;
+}
+.inline{
+    display:inline-block;
+    margin-right:50px;
+}
+table{
+    border-collapse:collapse;
+    border-radius:5px;
+    border:1px white solid;
+    background-color:white;
+}
+table#table>thead>tr>th{
+    border:1px white solid;
+    border-collapse:collapse;
+    border-radius:5px;
+    background-color:yellowgreen;
+    padding:8px 0 8px 10px;
+}
+table#table>tbody>tr>td{
+    border:1px yellowgreen solid;
+    padding:5px 0 5px 10px;
+    border-radius:5px;
+    border-collapse:collapse;
+}
+.home{ background-color: #000;}
+@media(max-width:1200px) {
+    .bthfare {
+        width: 60px;
+        text-transform: none;
+        margin: 5px 5px 0 0;
+    }
+}
+@media(max-width:1200px) {
+    .bbttnn{
+    width:100px;
+    text-transform:none;
+    margin:5px 5px 0 0;
+    }
+}
+.sortable:after {
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 15px;
+}
+#sortname{
+    cursor:pointer;
+}
+#sortname:hover{
+    background:#ddd;
+}

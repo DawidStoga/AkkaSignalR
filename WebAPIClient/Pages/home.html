@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/Site.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-3.1.1.js"></script>
+    <script src="../Scripts/knockout-3.4.2.js"></script>
+    <script src="../Scripts/ko.js"></script>
+    <script src="../Scripts/jquery.signalR-2.2.2.min.js" type="text/javascript"></script>
+    <!--<script src="http://localhost:999/signalr/hubs"></script>-->
+    <script type="text/javascript">
+        $(function () {
+            $("#header").load("/Pages/header.html");
+            $("#footer").load("/Pages/footer.html");
+            viewModel.DisplayUser();
+            viewModel.templateToUse = function (item) {
+                return item === this.selectedUser() ? 'editTmpl' : 'itemTmpl';
+            }.bind(viewModel);
+            ko.applyBindings(viewModel);
+        });
+    </script>
+    <style>
+        input{
+            text-transform:capitalize;
+        }
+    </style>
+</head>
+<body>
+    <div id='header'></div>
+    <div class="container body-content">
+        <div class="jumbotron custom">
+            <button class="btn btn-success bthfare bbttnn" data-bind="click: $root.DisplayUser, visible: Users().length ==0">Display users</button>
+
+            <section>
+                <div class="fareinput">
+                    <label for="Sort">Sort</label>
+                    <button class="btn btn-success bthfare bbttnn" data-bind="click: sortItems, enable: Users().length > 1">Sort</button>
+                </div>
+
+                <div class="fareinput">
+                    <label for="name">Name</label>
+                    <input type="text" style="text-decoration:none;" required maxlength="40" id="name" name="name" placeholder="enter name" data-bind="hasfocus:true"/>
+                </div>
+                <div class="fareinput">
+                    <label for="age">Age</label>
+                    <input type="number" name="age" id="age" max="100" required placeholder="enter age" />
+                </div>
+                <div class="fareinput buttons">
+                    <label for="btnadd">Action</label>
+                    <button class="btn btn-success kout-edit bthfare bbttnn" data-bind="click:$root.AddUser" id="btnadd">Add user ..</button>
+                </div>
+                <br style="clear:both;" />
+            </section>
+            <section>
+            </section>
+            <div>No of User: <span class="usrcnt" readonly="readonly" data-bind="text:Users().length" /></div>
+
+            <table id="table" class="userstable" data-bind="visible:Users().length>0">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th id="sortname" class="sortable" data-bind="click: sortItems, enable: Users().length > 1,css:{sortable:sorted()}">Name</th>
+                        <th>Age</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody data-bind="template: { name: templateToUse, foreach: Users }"></tbody>
+
+            </table>
+        </div>
+    </div>
+    <div id='footer'></div>
+</body>
+
+</html>
+<script id="itemTmpl" type="text/html">
+    <tr>
+        <td data-bind="text: Id"></td>
+        <td data-bind="text: Name"></td>    
+        <td data-bind="text: Age"></td>
+        <td class="buttons">
+            <button class="btn btn-success kout-edit bthfare" data-bind="click: $root.editItem">Edit</button>
+            <button class="btn btn-danger kout-delete bthfare" data-bind="click: $root.DeleteUser">Delete</button>
+
+        </td>
+    </tr>
+</script>
+
+<script id="editTmpl" type="text/html">
+    <tr>
+        <td data-bind="text: Id" ></td>
+        <td><input data-bind="value: Name" class="name" /></td>
+        <td><input data-bind="value: Age" class="userage" /></td>
+        <td class="buttons">
+            <button class="btn btn-success kout-edit bthfare" data-bind="click: $root.UpdateUser">Accept</button>
+            <button class="btn btn-danger kout-delete bthfare" data-bind="click: $root.cancelItemEdit">Cancel</button>
+        </td>
+    </tr>
+</script>
+

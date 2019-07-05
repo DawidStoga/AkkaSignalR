@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akka.Service.Actor", "Akka.Service\Akka.Service.Actor.csproj", "{9A0C5F12-1F5E-4351-977B-B04D04EAD69C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A5C95137-D8AF-403D-9529-ABC7247A2FB6} = {A5C95137-D8AF-403D-9529-ABC7247A2FB6}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akka.DB.Actor", "Akka.DB\Akka.DB.Actor.csproj", "{15E17855-32C4-46B5-95B8-02BA9AB0D6BD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A5C95137-D8AF-403D-9529-ABC7247A2FB6} = {A5C95137-D8AF-403D-9529-ABC7247A2FB6}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfHostedAPI", "SelfHostedAPI\SelfHostedAPI.csproj", "{D1EB851F-2989-4B99-BA08-7FFA52BE2A22}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A5C95137-D8AF-403D-9529-ABC7247A2FB6} = {A5C95137-D8AF-403D-9529-ABC7247A2FB6}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{A5C95137-D8AF-403D-9529-ABC7247A2FB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPIClient", "WebAPIClient\WebAPIClient.csproj", "{3CFC4B67-FEA2-4B62-A523-C307B457A459}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A0C5F12-1F5E-4351-977B-B04D04EAD69C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A0C5F12-1F5E-4351-977B-B04D04EAD69C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A0C5F12-1F5E-4351-977B-B04D04EAD69C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A0C5F12-1F5E-4351-977B-B04D04EAD69C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15E17855-32C4-46B5-95B8-02BA9AB0D6BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15E17855-32C4-46B5-95B8-02BA9AB0D6BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15E17855-32C4-46B5-95B8-02BA9AB0D6BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15E17855-32C4-46B5-95B8-02BA9AB0D6BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1EB851F-2989-4B99-BA08-7FFA52BE2A22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1EB851F-2989-4B99-BA08-7FFA52BE2A22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1EB851F-2989-4B99-BA08-7FFA52BE2A22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1EB851F-2989-4B99-BA08-7FFA52BE2A22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5C95137-D8AF-403D-9529-ABC7247A2FB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5C95137-D8AF-403D-9529-ABC7247A2FB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5C95137-D8AF-403D-9529-ABC7247A2FB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5C95137-D8AF-403D-9529-ABC7247A2FB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CFC4B67-FEA2-4B62-A523-C307B457A459}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CFC4B67-FEA2-4B62-A523-C307B457A459}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CFC4B67-FEA2-4B62-A523-C307B457A459}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CFC4B67-FEA2-4B62-A523-C307B457A459}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
