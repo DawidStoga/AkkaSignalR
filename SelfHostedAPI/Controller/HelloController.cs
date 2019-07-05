@@ -30,6 +30,7 @@ namespace SelfHostedAPI.Controller
         // GET api/values/5 
         public string Get(int id)
         {
+            return "get";
         }
 
         // POST api/values 
